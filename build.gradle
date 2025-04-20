@@ -18,8 +18,8 @@ repositories {
     mavenCentral()
 }
 
-sourceCompatibility = 11
-targetCompatibility = 11
+sourceCompatibility = 17
+targetCompatibility = 17
 
 dependencies {
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
@@ -31,5 +31,9 @@ dependencies {
     implementation group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
     implementation group: 'javassist', name: 'javassist', version: '3.12.1.GA'
     implementation group: 'junit', name: 'junit'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
+bootJar {
+    mainClass = 'email.Application'
+}
